@@ -78,7 +78,7 @@ async function generateRegistrationOptionsHandler(req: NextRequest) {
 
     const opts: GenerateRegistrationOptionsOpts = {
         rpName: 'Abstract Wallet',
-        rpID: 'localhost',
+        rpID: 'abstractwallet.vercel.app',
         userName: user.username,
         timeout: 60000,
         attestationType: 'none',
@@ -122,8 +122,8 @@ async function verifyRegistrationHandler(req: NextRequest) {
         const opts: VerifyRegistrationResponseOpts = {
             response: body,
             expectedChallenge: `${expectedChallenge}`,
-            expectedOrigin: 'http://localhost:3000',
-            expectedRPID: 'localhost',
+            expectedOrigin: 'https://abstractwallet.vercel.app',
+            expectedRPID: 'abstractwallet.vercel.app',
             requireUserVerification: false,
         };
         verification = await verifyRegistrationResponse(opts);
@@ -176,7 +176,7 @@ async function generateAuthenticationOptionsHandler(req: NextRequest) {
             transports: dev.transports,
         }) as PublicKeyCredentialDescriptorJSON),
         userVerification: 'preferred',
-        rpID: 'localhost',
+        rpID: 'abstractwallet.vercel.app',
     };
 
     const options = await generateAuthenticationOptions(opts);
@@ -216,8 +216,8 @@ async function verifyAuthenticationHandler(req: NextRequest) {
         const opts: VerifyAuthenticationResponseOpts = {
             response: body,
             expectedChallenge: `${expectedChallenge}`,
-            expectedOrigin: 'http://localhost:3000',
-            expectedRPID: 'localhost',
+            expectedOrigin: 'https://abstractwallet.vercel.app',
+            expectedRPID: 'abstractwallet.vercel.app',
             authenticator: dbAuthenticator,
             requireUserVerification: false,
         };
