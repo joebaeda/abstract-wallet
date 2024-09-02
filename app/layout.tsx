@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Secure Abstract Chain Wallet with Passkey',
     description: 'Decentralized apps for securely managing Abstract Chain wallets using Passkey for private key encryption and storage.',
-    url: 'https://abstractwallet.com',
+    url: 'https://abstractwallet.vercel.app',
     type: 'website',
     images: [
       {
-        url: 'https://abstractwallet.com/og-image.png',
+        url: 'https://abstractwallet.vercel.app/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Secure Abstract Chain Wallet with Passkey',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Secure Abstract Chain Wallet with Passkey',
     description: 'Manage your Abstract Chain wallet securely with Passkey integration. The ultimate protection for your crypto assets.',
-    images: ['https://abstractwallet.com/twitter-image.png'],
+    images: ['https://abstractwallet.vercel.app/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
